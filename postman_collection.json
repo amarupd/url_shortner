@@ -1,215 +1,313 @@
 {
-  "info": {
-    "name": "URL Shortener Service",
-    "_postman_id": "c15a8e2e-9f0f-4c2a-9b28-xyz123",
-    "description": "Postman collection for URL Shortener",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  "type": "collection.insomnia.rest/5.0",
+  "name": "Amar Dutt Url Shortner",
+  "meta": {
+    "id": "wrk_051a3e4bfc5e4d448734eae04caf7934",
+    "created": 1712139700036,
+    "modified": 1712139700036,
+    "description": ""
   },
-  "item": [
+  "collection": [
     {
-      "name": "Register",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"secret\"\n}"
-        },
-        "url": {
-          "raw": "{{baseUrl}}/api/auth/register",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "auth",
-            "register"
-          ]
-        }
+      "name": "dashboard",
+      "meta": {
+        "id": "fld_05068bab571b44e0a6a3fa7a78a786c4",
+        "created": 1717919765205,
+        "modified": 1717919765205,
+        "sortKey": -1717919765205,
+        "description": ""
       }
     },
     {
-      "name": "Login",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"secret\"\n}"
-        },
-        "url": {
-          "raw": "{{baseUrl}}/api/auth/login",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "auth",
-            "login"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Create Short URL (anonymous)",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"originalUrl\": \"https://example.com\"\n}"
-        },
-        "url": {
-          "raw": "{{baseUrl}}/api/urls",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "urls"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Create Short URL (auth)",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
+      "name": "URL Shortener Service",
+      "meta": {
+        "id": "fld_dec8348ce4434abd83d6a37fb63da1cc",
+        "created": 1756300554715,
+        "modified": 1756300554715,
+        "sortKey": -1756300551482,
+        "description": "Postman collection for URL Shortener"
+      },
+      "children": [
+        {
+          "url": "http://localhost:3000/api/auth/register",
+          "name": "Register",
+          "meta": {
+            "id": "req_01f0bf8f127041b5b866eeacfe04a0bc",
+            "created": 1756300554717,
+            "modified": 1756309690750,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1756300551481
           },
-          {
-            "key": "Authorization",
-            "value": "Bearer {{token}}"
+          "method": "POST",
+          "body": {
+            "mimeType": "text/plain",
+            "text": "{\n  \"email\": \"amarduttupadhyay@gmail.com\",\n  \"password\": \"Amar#1210\",\n\t\"password_confirmation\": \"Amar#1210\",\n\t\"name\": \"Amar Dutt Upadhyay\",\n\t\"phone\": \"7272096364\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
           }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"originalUrl\": \"https://openai.com\",\n  \"expiresAt\": \"\"\n}"
         },
-        "url": {
-          "raw": "{{baseUrl}}/api/urls",
-          "host": [
-            "{{baseUrl}}"
+        {
+          "url": "http://localhost:3000/api/auth/login",
+          "name": "Login",
+          "meta": {
+            "id": "req_12e8d7f5c7d6433d9d61b281de00bb3e",
+            "created": 1756300554719,
+            "modified": 1756309685111,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1756300551480
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "text/plain",
+            "text": "{\n  \"email\": \"amarduttupadhyay@gmail.com\",\n  \"password\": \"Amar#1210\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
           ],
-          "path": [
-            "api",
-            "urls"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Bulk Shorten (anonymous)",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
           }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"urls\": [\n    {\n      \"originalUrl\": \"https://a.com\"\n    },\n    {\n      \"originalUrl\": \"https://b.com\"\n    }\n  ]\n}"
         },
-        "url": {
-          "raw": "{{baseUrl}}/api/urls/bulk",
-          "host": [
-            "{{baseUrl}}"
+        {
+          "url": "http://localhost:3000/api/urls",
+          "name": "Create Short URL (anonymous)",
+          "meta": {
+            "id": "req_000a3ead284348b090bd269893b92329",
+            "created": 1756300554720,
+            "modified": 1756309680072,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1756300551479
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "text/plain",
+            "text": "{\n  \"originalUrl\": \"https://www.amarduttupadhyay.in/\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
           ],
-          "path": [
-            "api",
-            "urls",
-            "bulk"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Redirect",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "{{baseUrl}}/{{code}}",
-          "host": [
-            "{{baseUrl}}"
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:3000/api/urls",
+          "name": "Create Short URL (auth)",
+          "meta": {
+            "id": "req_cf716559377b49468c9c91ff10d8fd42",
+            "created": 1756300554721,
+            "modified": 1756310333769,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1756300551478
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "text/plain",
+            "text": "{\n  \"originalUrl\": \"https://www.amarduttupadhyay.in/\",\n  \"expiresAt\": \"2025-08-27 15:59:08\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json",
+              "id": "pair_ef59a3e9641b484eb47c0093fa73bbc1"
+            }
           ],
-          "path": [
-            "{{code}}"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Analytics",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "{{baseUrl}}/api/urls/{{code}}/analytics",
-          "host": [
-            "{{baseUrl}}"
+          "authentication": {
+            "type": "bearer",
+            "disabled": false,
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWYyMTkwNDc5Y2VlNGZjZGZhNWQyYiIsImlhdCI6MTc1NjMwNzk4MywiZXhwIjoxNzU2OTEyNzgzfQ.gB3k-IvEZNtwBbkuyBFcAqldKciSEPPscTTQBbuPIaw",
+            "prefix": ""
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:3000/api/urls/bulk",
+          "name": "Bulk Shorten (anonymous)",
+          "meta": {
+            "id": "req_05923b599116405fab769167d3b6d5ed",
+            "created": 1756300554722,
+            "modified": 1756309667495,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1756300551477
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "text/plain",
+            "text": "{\n  \"urls\": [\n    {\n      \"originalUrl\": \"https://a.com\"\n    },\n    {\n      \"originalUrl\": \"https://b.com\"\n    },\n    {\n      \"originalUrl\": \"https://c.com\"\n    },\n    {\n      \"originalUrl\": \"https://d.com\"\n    },\n    {\n      \"originalUrl\": \"https://e.com\"\n    },\n    {\n      \"originalUrl\": \"https://a.com\"\n    }\n  ]\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
           ],
-          "path": [
-            "api",
-            "urls",
-            "{{code}}",
-            "analytics"
-          ]
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWYyMTkwNDc5Y2VlNGZjZGZhNWQyYiIsImlhdCI6MTc1NjMwNzk4MywiZXhwIjoxNzU2OTEyNzgzfQ.gB3k-IvEZNtwBbkuyBFcAqldKciSEPPscTTQBbuPIaw"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:3000/u3hB0bA6",
+          "name": "Redirect",
+          "meta": {
+            "id": "req_87edbd54636b4bc29927163caca482c1",
+            "created": 1756300554723,
+            "modified": 1756309660310,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1756300551476
+          },
+          "method": "GET",
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:3000/api/urls/u3hB0bA6/qr",
+          "name": "QR Code (PNG)",
+          "meta": {
+            "id": "req_1818e70bc1a245c294890dda9656e71f",
+            "created": 1756300554724,
+            "modified": 1756309643583,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1756300551474
+          },
+          "method": "GET",
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "http://localhost:3000/api/urls/u3hB0bA6/analytics",
+          "name": "Analytics",
+          "meta": {
+            "id": "req_6cd5b12fa7614fa2b606ee62694c11cd",
+            "created": 1756300554724,
+            "modified": 1756309649400,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1756300551475
+          },
+          "method": "GET",
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
         }
-      }
-    },
-    {
-      "name": "QR Code (PNG)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "{{baseUrl}}/api/urls/{{code}}/qr",
-          "host": [
-            "{{baseUrl}}"
-          ],
-          "path": [
-            "api",
-            "urls",
-            "{{code}}",
-            "qr"
-          ]
-        }
+      ],
+      "environment": {
+        "baseUrl": "http://localhost:3000",
+        "token": "",
+        "code": ""
       }
     }
   ],
-  "variable": [
-    {
-      "key": "baseUrl",
-      "value": "http://localhost:3000"
+  "cookieJar": {
+    "name": "Default Jar",
+    "meta": {
+      "id": "jar_d589651e6bc7499a2a64bd9891c58eaba35df715",
+      "created": 1712139700040,
+      "modified": 1712139716870
     },
-    {
-      "key": "token",
-      "value": ""
-    },
-    {
-      "key": "code",
-      "value": ""
+    "cookies": [
+      {
+        "key": "PHPSESSID",
+        "value": "vskcou2c23etdmdesan8dod0c9",
+        "domain": "gnews.io",
+        "path": "/",
+        "hostOnly": true,
+        "creation": "2024-04-03T10:21:56.869Z",
+        "lastAccessed": "2024-04-03T10:21:56.869Z",
+        "id": "09cf3ae6-6aff-490a-a9a8-eb4aa054abdd"
+      }
+    ]
+  },
+  "environments": {
+    "name": "Base Environment",
+    "meta": {
+      "id": "env_d589651e6bc7499a2a64bd9891c58eaba35df715",
+      "created": 1712139700039,
+      "modified": 1712139700039,
+      "isPrivate": false
     }
-  ]
+  }
 }
