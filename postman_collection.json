@@ -9,16 +9,6 @@
   },
   "collection": [
     {
-      "name": "dashboard",
-      "meta": {
-        "id": "fld_05068bab571b44e0a6a3fa7a78a786c4",
-        "created": 1717919765205,
-        "modified": 1717919765205,
-        "sortKey": -1717919765205,
-        "description": ""
-      }
-    },
-    {
       "name": "URL Shortener Service",
       "meta": {
         "id": "fld_dec8348ce4434abd83d6a37fb63da1cc",
